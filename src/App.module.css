@@ -26,15 +26,13 @@ body {
 
 .container {
   position: absolute;
-  top: 0;
   right: 0;
   left: 0;
-  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all .25s ease;
-
+  top: 150px
 }
 
 .wrap {
@@ -50,7 +48,6 @@ body {
   background-color: #fff;
   margin: 16px;
   transition: all .25s ease;
-
   position: relative;
   border-radius: 30px;
   overflow: hidden;

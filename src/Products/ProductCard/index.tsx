@@ -1,17 +1,15 @@
-import { useState } from "react";
 import { Product } from "../../data/model";
 import styles from "./styles.module.css";
 import check from "../../assets/check.png";
 
 interface Props {
   data: Product;
+  addProduct: (id: number) => void;
 }
 
-function ProductCard({ data }: Props) {
-  const [added, setAdded] = useState<boolean>(false);
-
+function ProductCard({ data, addProduct }: Props) {
   return (
-    <div className={styles.root}>
+    <div className={styles.root} key={`${data.id}-${data.color}`}>
       {/* image */}
       <div className={styles.imageCtn} style={{ backgroundColor: data.color }}>
         <img
@@ -30,14 +28,14 @@ function ProductCard({ data }: Props) {
       {/* price */}
       <div className={styles.priceCtn}>
         <p className={styles.priceTitle}>${data.price}</p>
-        {added ? (
+        {data.total > 0 ? (
           <div className={styles.picked}>
             <img src={check} alt="" width="30" height="30" />
           </div>
         ) : (
           <div
             className={styles.buttonAddToCart}
-            onClick={() => setAdded(true)}
+            onClick={() => addProduct(data.id)}
           >
             ADD TO CART
           </div>

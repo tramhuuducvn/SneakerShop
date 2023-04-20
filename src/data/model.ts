@@ -5,5 +5,5 @@ export interface Product {
   description: string;
   price: number;
   color: string;
-  added: boolean;
+  total: number;
 }

@@ -1,0 +1,64 @@
+body {
+  color: #303841;
+  font-family: Rubik, sans-serif;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.App::before {
+  content: "";
+  display: block;
+  position: fixed;
+  width: 300%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  transform: translateX(-50%) skewY(-8deg);
+  background-color: #f6c90e;
+  z-index: -1;
+  text-align: center;
+  animation: backgroudWave 8s ease-in-out infinite alternate;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: all;
+}
+
+.box {
+  background-color: #fff;
+  margin: 16px;
+  transition: all;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+@keyframes backgroudWave {
+  0% {
+    top: 50%
+  }
+
+  50% {
+    top: 65%
+  }
+}

@@ -33,7 +33,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all;
+  transition: all .25s ease;
+
 }
 
 .wrap {
@@ -41,13 +42,15 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  transition: all;
+  transition: all .25s ease;
+
 }
 
 .box {
   background-color: #fff;
   margin: 16px;
-  transition: all;
+  transition: all .25s ease;
+
   position: relative;
   border-radius: 30px;
   overflow: hidden;

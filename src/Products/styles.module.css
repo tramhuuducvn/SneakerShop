@@ -51,7 +51,6 @@
     display: block;
     flex-direction: column;
     padding: 0 16px;
-    margin-left: -16px;
 }
 
 .list::-webkit-scrollbar {

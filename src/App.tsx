@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from "./App.module.css";
 import Cart from "./Cart";
 import Products from "./Products";
@@ -7,7 +7,6 @@ import { products } from "./data/data";
 
 function App() {
   const [data, setData] = useState<Product[]>(products);
-  // const [cart, setCart] = useState<Product[]>([]);
 
   const cart: Product[] = useMemo(() => {
     return data.filter((item) => item.total > 0);

@@ -1,3 +1,5 @@
+@import url('https://fonts.google.com/specimen/Rubik?query=Rubik');
+
 body {
   color: #303841;
   font-family: Rubik, sans-serif;
@@ -25,15 +27,19 @@ body {
 }
 
 .container {
-  position: absolute;
-  right: 0;
-  left: 0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all .25s ease;
-  top: 150px
 }
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding-top: 200px;
+  }
+}
+
 
 .wrap {
   display: flex;
@@ -41,16 +47,16 @@ body {
   justify-content: center;
   align-items: center;
   transition: all .25s ease;
-
 }
 
 .box {
   background-color: #fff;
-  margin: 16px;
+  margin: 32px 16px;
   transition: all .25s ease;
   position: relative;
   border-radius: 30px;
   overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @keyframes backgroudWave {

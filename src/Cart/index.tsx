@@ -31,7 +31,11 @@ function Cart({ cart, addProduct, decreaseProduct, removeProduct }: Props) {
           <p className={styles.title}>${totalPice}</p>
         </div>
 
-        {cart.length < 1 && <p>Your cart is empty</p>}
+        {cart.length < 1 && (
+          <p style={{ textAlign: "left", marginLeft: 28 }}>
+            Your cart is empty
+          </p>
+        )}
 
         <div className={styles.list}>
           {cart.map((item) => (

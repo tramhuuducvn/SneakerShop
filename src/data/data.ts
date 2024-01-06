@@ -1,4 +1,4 @@
-import { Product } from "./model";
+import { Product, ServeItem, Event } from "./model";
 
 export const products: Product[] = [
   {
@@ -112,3 +112,51 @@ export const products: Product[] = [
     total: 0,
   },
 ];
+
+
+export const items: ServeItem[] = [
+  {
+    id: 1,
+    name: "Tiger",
+    description: "Bia ngon, Bia ngon",
+    image: "https://www.heinekenmalaysia.com/wp-content/uploads/2019/12/tiger_brands_210521-ver5-1.png",
+    number: 30,
+  },
+  {
+    id: 2,
+    name: "1664 Blanc",
+    description: "Bia vị chất mở bất ngờ",
+    image: "https://sanhbia.com/wp-content/uploads/2021/09/1664-lon3.jpg",
+    number: 100,
+  },
+  {
+    id: 3,
+    name: "Bia Huda",
+    description: "Huda đậm đà miền trung",
+    image: "https://cdn.tgdd.vn/Products/Images/2282/113154/bhx/thung-24-lon-bia-huda-330ml-202309191319361732.jpg",
+    number: 30,
+  },
+  {
+    id: 4,
+    name: "Bia Sai Gon",
+    description: "Sài gòn đẹp quá sài gòn ơi",
+    image: "https://www.sabeco.com.vn/Data/Sites/1/media/thuong-hieu/special/special-635x515.png",
+    number: 100,
+  }
+]
+
+
+export const eventList: Event[] = [ {
+  eventTitle: "Khui nắp đầu năm, tại sao không?",
+  background: "https://png.pngtree.com/thumb_back/fw800/background/20190813/pngtree-oktoberfest-beer-background-vector-illustration-with-a-glass-and-wheat-image_290537.jpg",
+  eventTimeline:  {
+    startTime: new Date(),
+    endTime: new Date()
+  },
+  promotionMessage: "Bùn ngủ quá code hông nỗi lun",
+  numberItem: 100,
+  registrationTime: {
+    startTime: new Date(),
+    endTime: new Date()
+  },
+}]
